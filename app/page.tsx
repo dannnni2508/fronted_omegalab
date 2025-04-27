@@ -1,4 +1,8 @@
 import { LoginRegisterForm } from "@/components/login-register-form"
+import { Button } from "@/components/ui/button"
+import { ArrowRight } from "lucide-react"
+import Link from "next/link"
+import { useRouter } from "next/navigation"
 
 export default function Home() {
   return (
@@ -19,6 +23,18 @@ export default function Home() {
               <span className="text-4xl font-bold">U</span>
             </div>
             <p className="text-sm text-center drop-shadow-md mt-4">Tu futuro académico comienza aquí</p>
+            
+            {/* Botón de navegación al login */}
+            <div className="flex justify-center mt-6">
+              <Link href="/login">
+                <Button 
+                  className="bg-blue-600 hover:bg-blue-700 rounded-md h-10 w-10 p-0"
+                  aria-label="Ir a iniciar sesión"
+                >
+                  <ArrowRight className="h-5 w-5" />
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
         <div className="bg-white p-8 rounded-xl md:rounded-l-none shadow-lg">

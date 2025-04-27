@@ -2,6 +2,7 @@
 import { DashboardMetrics } from "@/components/dashboard/dashboard-metrics"
 import { ProgressChart } from "@/components/dashboard/progress-chart"
 import { StudentGreeting } from "@/components/dashboard/student-greeting"
+import { StudentProgress } from "@/components/dashboard/student-progress"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Clock, Moon, Sun } from "lucide-react"
 
@@ -45,6 +46,9 @@ export default function DashboardPage() {
             </CardContent>
           </Card>
 
+          {/* Avance en la carrera (nuevo componente) */}
+          <StudentProgress />
+          
           {/* Métricas */}
           <DashboardMetrics />
 
